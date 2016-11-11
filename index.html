@@ -64,12 +64,17 @@
         background: #ffffff;
       }
 
-      .hubroad-loading-logo {
+      .hubroad-loading {
         position: absolute;
         left: 50%;
-        top: 30%;
+        top: 40%;
         width: 100px;
-        margin-left: -70px;
+        margin-left: -50px;
+      }
+
+      .hubroad-loading-logo {
+        margin-left: -22px;
+        margin-top: -30px;
       }
 
       .blob {
@@ -183,24 +188,26 @@
         }
       }
     </style>
-    <div class="hubroad-loading-logo"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAxNTAgMTUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxNTAgMTUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KPCFbQ0RBVEFbDQoJLnN0MHtmaWxsOiMzMzMzMzM7fQ0KXV0+DQo8L3N0eWxlPg0KPGc+DQoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTIwLjIsMjAuM2gxMC4zdjM4LjJoMzYuMVYyMC4zaDEwLjJ2ODIuNEg2Ni43VjY3LjJIMzAuNXYzNS42SDIwLjJWMjAuM3oiLz4NCgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNzkuNiwyMC4zSDk4YzE2LjgsMCwyNS43LDguNSwyNS43LDIyLjhjMCw5LjgtNC44LDE4LjctMTQuNCwyMS44bDIwLjUsMzcuOGgtMTEuNUw5OS43LDY3SDc5LjZ2LTguNEg5OA0KCQljOS43LDAsMTUuNy00LjUsMTUuNy0xNS4zYzAtOC43LTQuNi0xNC41LTE2LjMtMTQuNUg3OS42VjIwLjN6Ii8+DQoJPGc+DQoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMC4yLDExMC4xaDIuMnY4LjRoMTAuMnYtOC40aDIuMnYxOS4yaC0yLjJ2LTguOEgyMi40djguOGgtMi4yVjExMC4xeiIvPg0KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzguOCwxMjMuOVYxMTVINDF2OWMwLDIuMywxLjUsMy43LDMuNCwzLjdjMi4yLDAsMy43LTEuNiwzLjctNFYxMTVoMi4ydjE0LjNoLTIuMnYtMi4xDQoJCQljLTAuNywxLjMtMi4zLDIuNC00LjIsMi40QzQwLjUsMTI5LjcsMzguOCwxMjcuMiwzOC44LDEyMy45eiIvPg0KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTMuOSwxMDkuNEg1NnY3LjljMC40LTAuNywyLjEtMi43LDUuMS0yLjdjNCwwLDYuOCwzLjEsNi44LDcuNWMwLDQuNC0yLjksNy41LTcsNy41Yy0zLjEsMC00LjYtMi4xLTUtMi42DQoJCQl2Mi4zaC0yLjF2LTE5LjlINTMuOXogTTYwLjgsMTI3LjdjMi44LDAsNC45LTIuMiw0LjktNS41cy0yLTUuNi00LjgtNS42Yy0yLjcsMC00LjksMi00LjksNS42QzU2LDEyNS4yLDU3LjgsMTI3LjcsNjAuOCwxMjcuN3oiDQoJCQkvPg0KCTwvZz4NCgk8Zz4NCgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTcxLjIsMTEwLjFoNC45YzMuOSwwLDYsMiw2LDUuM2MwLDIuMy0xLjEsNC40LTMuNCw1LjFsNC44LDguOEg4MWwtNC4zLTguNGgtMy4zdjguNGgtMi4yVjExMC4xeiBNNzYuMSwxMTkNCgkJCWMyLjMsMCwzLjctMSwzLjctMy42YzAtMi0xLjEtMy40LTMuOC0zLjRoLTIuNXY3SDc2LjF6Ii8+DQoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik05Mi40LDExNC43YzQuMywwLDcuNSwzLjIsNy41LDcuNXMtMy4yLDcuNS03LjUsNy41Yy00LjMsMC03LjUtMy4yLTcuNS03LjVDODUsMTE3LjgsODguMiwxMTQuNyw5Mi40LDExNC43eg0KCQkJIE05Mi40LDEyNy43YzMuMSwwLDUuMy0yLjMsNS4zLTUuNXMtMi4yLTUuNS01LjMtNS41Yy0zLjEsMC01LjIsMi40LTUuMiw1LjVDODcuMiwxMjUuNCw4OS40LDEyNy43LDkyLjQsMTI3Ljd6Ii8+DQoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMDcuMiwxMjAuMmMxLjgsMCwzLjIsMC43LDMuOCwxLjN2LTEuOGMwLTItMS4zLTMuMi0zLjUtMy4yYy0xLjgsMC0zLjIsMC42LTQuMiwxLjJsLTAuOS0xLjYNCgkJCWMxLTAuNiwyLjktMS42LDUuMy0xLjZjMy45LDAsNS40LDIuMiw1LjQsNS4ydjkuNGgtMS45bC0wLjItMS4yYy0wLjcsMC45LTIsMS42LTMuOSwxLjZjLTMuMSwwLTUuNC0yLTUuNC00LjgNCgkJCUMxMDEuNywxMjIuMiwxMDQsMTIwLjIsMTA3LjIsMTIwLjJ6IE0xMDcuNSwxMjcuOWMyLjEsMCwzLjUtMS4yLDMuNS0zYzAtMS44LTEuNC0yLjktMy42LTIuOWMtMi4yLDAtMy42LDEuMy0zLjYsMi45DQoJCQlDMTAzLjksMTI2LjUsMTA1LjMsMTI3LjksMTA3LjUsMTI3Ljl6Ii8+DQoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMjkuOCwxMjkuM2gtMi4xVjEyN2MtMC40LDAuNS0xLjgsMi42LTUsMi42Yy00LjEsMC03LTMuMS03LTcuNWMwLTQuNCwyLjgtNy41LDYuOC03LjVjMywwLDQuNiwxLjksNSwyLjcNCgkJCXYtNy45aDIuMkwxMjkuOCwxMjkuM0wxMjkuOCwxMjkuM3ogTTEyMi44LDExNi42Yy0yLjgsMC00LjgsMi4zLTQuOCw1LjZzMi4xLDUuNSw0LjksNS41YzMsMCw0LjgtMi41LDQuOC01LjUNCgkJCUMxMjcuNywxMTguNywxMjUuNSwxMTYuNiwxMjIuOCwxMTYuNnoiLz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg=="></div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-      <defs>
-        <filter id="gooey">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
-          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
-          <feBlend in="SourceGraphic" in2="goo"></feBlend>
-        </filter>
-      </defs>
-    </svg>
-    <div class="blob blob-0"></div>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-    <div class="blob blob-4"></div>
-    <div class="blob blob-5"></div>
+    <div class="hubroad-loading">
+      <div class="hubroad-loading-logo"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAxNTAgMTUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxNTAgMTUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KPCFbQ0RBVEFbDQoJLnN0MHtmaWxsOiMzMzMzMzM7fQ0KXV0+DQo8L3N0eWxlPg0KPGc+DQoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTIwLjIsMjAuM2gxMC4zdjM4LjJoMzYuMVYyMC4zaDEwLjJ2ODIuNEg2Ni43VjY3LjJIMzAuNXYzNS42SDIwLjJWMjAuM3oiLz4NCgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNzkuNiwyMC4zSDk4YzE2LjgsMCwyNS43LDguNSwyNS43LDIyLjhjMCw5LjgtNC44LDE4LjctMTQuNCwyMS44bDIwLjUsMzcuOGgtMTEuNUw5OS43LDY3SDc5LjZ2LTguNEg5OA0KCQljOS43LDAsMTUuNy00LjUsMTUuNy0xNS4zYzAtOC43LTQuNi0xNC41LTE2LjMtMTQuNUg3OS42VjIwLjN6Ii8+DQoJPGc+DQoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMC4yLDExMC4xaDIuMnY4LjRoMTAuMnYtOC40aDIuMnYxOS4yaC0yLjJ2LTguOEgyMi40djguOGgtMi4yVjExMC4xeiIvPg0KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzguOCwxMjMuOVYxMTVINDF2OWMwLDIuMywxLjUsMy43LDMuNCwzLjdjMi4yLDAsMy43LTEuNiwzLjctNFYxMTVoMi4ydjE0LjNoLTIuMnYtMi4xDQoJCQljLTAuNywxLjMtMi4zLDIuNC00LjIsMi40QzQwLjUsMTI5LjcsMzguOCwxMjcuMiwzOC44LDEyMy45eiIvPg0KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTMuOSwxMDkuNEg1NnY3LjljMC40LTAuNywyLjEtMi43LDUuMS0yLjdjNCwwLDYuOCwzLjEsNi44LDcuNWMwLDQuNC0yLjksNy41LTcsNy41Yy0zLjEsMC00LjYtMi4xLTUtMi42DQoJCQl2Mi4zaC0yLjF2LTE5LjlINTMuOXogTTYwLjgsMTI3LjdjMi44LDAsNC45LTIuMiw0LjktNS41cy0yLTUuNi00LjgtNS42Yy0yLjcsMC00LjksMi00LjksNS42QzU2LDEyNS4yLDU3LjgsMTI3LjcsNjAuOCwxMjcuN3oiDQoJCQkvPg0KCTwvZz4NCgk8Zz4NCgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTcxLjIsMTEwLjFoNC45YzMuOSwwLDYsMiw2LDUuM2MwLDIuMy0xLjEsNC40LTMuNCw1LjFsNC44LDguOEg4MWwtNC4zLTguNGgtMy4zdjguNGgtMi4yVjExMC4xeiBNNzYuMSwxMTkNCgkJCWMyLjMsMCwzLjctMSwzLjctMy42YzAtMi0xLjEtMy40LTMuOC0zLjRoLTIuNXY3SDc2LjF6Ii8+DQoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik05Mi40LDExNC43YzQuMywwLDcuNSwzLjIsNy41LDcuNXMtMy4yLDcuNS03LjUsNy41Yy00LjMsMC03LjUtMy4yLTcuNS03LjVDODUsMTE3LjgsODguMiwxMTQuNyw5Mi40LDExNC43eg0KCQkJIE05Mi40LDEyNy43YzMuMSwwLDUuMy0yLjMsNS4zLTUuNXMtMi4yLTUuNS01LjMtNS41Yy0zLjEsMC01LjIsMi40LTUuMiw1LjVDODcuMiwxMjUuNCw4OS40LDEyNy43LDkyLjQsMTI3Ljd6Ii8+DQoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMDcuMiwxMjAuMmMxLjgsMCwzLjIsMC43LDMuOCwxLjN2LTEuOGMwLTItMS4zLTMuMi0zLjUtMy4yYy0xLjgsMC0zLjIsMC42LTQuMiwxLjJsLTAuOS0xLjYNCgkJCWMxLTAuNiwyLjktMS42LDUuMy0xLjZjMy45LDAsNS40LDIuMiw1LjQsNS4ydjkuNGgtMS45bC0wLjItMS4yYy0wLjcsMC45LTIsMS42LTMuOSwxLjZjLTMuMSwwLTUuNC0yLTUuNC00LjgNCgkJCUMxMDEuNywxMjIuMiwxMDQsMTIwLjIsMTA3LjIsMTIwLjJ6IE0xMDcuNSwxMjcuOWMyLjEsMCwzLjUtMS4yLDMuNS0zYzAtMS44LTEuNC0yLjktMy42LTIuOWMtMi4yLDAtMy42LDEuMy0zLjYsMi45DQoJCQlDMTAzLjksMTI2LjUsMTA1LjMsMTI3LjksMTA3LjUsMTI3Ljl6Ii8+DQoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMjkuOCwxMjkuM2gtMi4xVjEyN2MtMC40LDAuNS0xLjgsMi42LTUsMi42Yy00LjEsMC03LTMuMS03LTcuNWMwLTQuNCwyLjgtNy41LDYuOC03LjVjMywwLDQuNiwxLjksNSwyLjcNCgkJCXYtNy45aDIuMkwxMjkuOCwxMjkuM0wxMjkuOCwxMjkuM3ogTTEyMi44LDExNi42Yy0yLjgsMC00LjgsMi4zLTQuOCw1LjZzMi4xLDUuNSw0LjksNS41YzMsMCw0LjgtMi41LDQuOC01LjUNCgkJCUMxMjcuNywxMTguNywxMjUuNSwxMTYuNiwxMjIuOCwxMTYuNnoiLz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg=="></div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="gooey">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+            <feBlend in="SourceGraphic" in2="goo"></feBlend>
+          </filter>
+        </defs>
+      </svg>
+      <div class="blob blob-0"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="blob blob-4"></div>
+      <div class="blob blob-5"></div>
+    </div>
 
   </app-root>
-<script type="text/javascript" src="inline.js"></script><script type="text/javascript" src="styles.d72259d13bcb8c11a9b2.bundle.js"></script><script type="text/javascript" src="scripts.9627d6187f1297b4e067.bundle.js"></script><script type="text/javascript" src="main.77736529a4a6d5214182.bundle.js"></script></body>
+<script type="text/javascript" src="inline.js"></script><script type="text/javascript" src="styles.eff47069c14ae62f038d.bundle.js"></script><script type="text/javascript" src="scripts.9627d6187f1297b4e067.bundle.js"></script><script type="text/javascript" src="main.f4b2dc657ad99334695c.bundle.js"></script></body>
 </html>
